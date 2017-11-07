@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.1.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="warp">
+    <img src="images/logo.png" alt="">
+    <ul>
+        <li class="right">首页</li>
+        <li>产品</li>
+        <li>功能</li>
+        <li>关于</li>
+        <li>项目</li>
+        <li>价格</li>
+        <li>服务</li>
+        <li>联系</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="con c1" id="con1">
+        <img src="images/3.jpg" alt="">
+    </div>
+    <div class="con c2" id="con2">
+        <h2>产品介绍</h2>
+        <div class="c2-con">
+            <span></span>
+            <span class="c2-h glyphicon glyphicon-tags"></span>
+            <span></span>
+        </div>
+        <p>
+            亲，本版本是最简单的单页式模板，不需要创建内页<br>
+            一般来说，只要半天就可以完成对这个模板的设定哦<br>
+            如果您在使用中有什么问题，可以在教程中找到对应的帮助信息哦
+        </p>
+        <div class="c2-bot">
+            <img src="images/ss.jpg" alt="">
+        </div>
+    </div>
+    <div class="con c3" id="con3">
+        <h2>模板功能</h2>
+        <div class="c3-con">
+            <span></span>
+            <span class="c3-h glyphicon glyphicon-heart"></span>
+            <span></span>
+        </div>
+        <p>
+            这些文字都是可以根据您的需要自行更改的，所以不要怕和您的需要不一样哦.<br>
+            图片的话都没有具体的大小要求，合适就好，开心就好
+        </p>
+        <div class="c3-bottom">
+            <div class="c3-top">
+                <div class="c3-top1"></div>
+                <div class="c3-top2"></div>
+                <div class="c3-top3"></div>
+            </div>
+            <div class="c3-bot">
+                <div class="c3-bot1"></div>
+                <div class="c3-bot2"></div>
+                <div class="c3-bot3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="con c4" id="con4">
+
+    </div>
+    <div class="con c5" id="con5">5</div>
+    <div class="con c6" id="con6">6</div>
+    <div class="con c7" id="con7">7</div>
+    <div class="con c8" id="con8">8</div>
+</div>
+<script type="text/javascript">
+    $(function () {
+       var index=0;
+       $(".warp ul li").click(function () {
+           index=$(this).index()+1;
+           var ss=$("#con"+index).offset().top;
+           $(this).addClass("right").siblings().removeClass("right");
+           $("body,html").animate({scrollTop:ss},500);
+       });
+    });
+</script>
+</body>
+</html>
+
+
+
